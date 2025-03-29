@@ -1,0 +1,170 @@
+@import 'reset';
+@import 'variables';
+
+@mixin outline-style {
+  outline: 2px solid #000;
+}
+
+@mixin responsive-grid($columns) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: 30px;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $font-primary;
+  font-size: 16px;
+}
+
+header {
+  padding: 30px;
+  
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title-container {
+      @include flex-center;
+
+
+      img {
+        width: 3.5rem;
+        height: 3.5rem;
+        margin-right: 10px;
+      }
+  
+      h1 {
+        font-size: 2rem;
+        font-family: $font-secondary;
+        font-weight: normal;
+      }
+    } 
+
+    .nav-icon-container {
+      display: none;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-family: $font-secondary;
+    }
+  }
+}
+  
+main {
+  flex: 1;
+  padding: 0 30px 30px 30px;
+  
+  .content-container {
+    @include responsive-grid(3);
+  
+    section {
+      background-color: $secondary-color;
+      @include outline-style;
+
+      .section-title-container {
+        display: flex;
+        justify-content: flex-end;
+
+        h2 {
+          font-weight: normal;
+          font-size: 1.5rem;
+          @include outline-style;
+          padding: 10px 3rem;
+        }
+      }
+
+      p {
+        padding: 40px 20px 20px 20px;
+      }
+    }
+
+    @each $section, $color in $colors {
+      ##{$section} h2 {
+        background-color: $color;
+      }
+    }
+  }
+}
+  
+footer {
+  background-color: $secondary-color;
+  text-align: center;
+  padding: 30px;
+  @include outline-style;
+
+  .name {
+    font-weight: bold;
+  }
+}
+
+/* Mobile and Tablet (navigation menu) */
+@media only screen and (max-width: 1024px) {
+  .header-container nav {
+    .nav-icon-container {
+      display: block;
+      cursor: pointer;
+      width: 55px;
+      height: 55px;
+      background-color: $secondary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      outline: 2px solid #000;
+  
+      img {
+        transform: scale(0.8);
+        transform-origin: center;
+      }
+    }
+
+    .nav-links {
+      display: none;
+    }
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 599px) {
+  main .content-container {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  main .content-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "lorem lorem"
+      "ipsum dolor";
+  }
+
+  #lorem {
+    grid-area: lorem;
+  }
+
+  #ipsum {
+    grid-area: ipsum;
+  }
+
+  #dolor {
+    grid-area: dolor;
+  }
+}
