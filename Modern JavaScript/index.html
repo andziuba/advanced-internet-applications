@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elixirs</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>Elixirs</h1>
+        <div id="filters-container">
+            <select id="difficulty-filter">
+                <option value="" selected>All difficulty levels</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Advanced">Advanced</option>
+                <option value="OrdinaryWizardingLevel">OrdinaryWizardingLevel</option>
+                <option value="OneOfAKind">OneOfAKind</option>
+                <option value="Unknown">Unknown</option>
+            </select>
+            <input type="text" id="search-bar" placeholder="Search elixirs...">
+        </div>
+    </div>
+    <div id="content">
+        <div id="elixirs-list"></div>
+        <div id="elixir-details">
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
