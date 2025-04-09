@@ -19,8 +19,8 @@ const loadElixirs = async () => {
         renderElixirsList(filteredElixirs);
     };
 
-     searchBar.addEventListener('input', filterAndSearchElixirs);
-        difficultyFilter.addEventListener('change', filterAndSearchElixirs);
+    searchBar.addEventListener('input', filterAndSearchElixirs);
+    difficultyFilter.addEventListener('change', filterAndSearchElixirs);
 
     filterAndSearchElixirs();
 };
