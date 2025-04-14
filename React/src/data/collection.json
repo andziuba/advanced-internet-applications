@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Espresso",
+    "description": "A strong, concentrated coffee made by forcing hot water through finely ground coffee beans, served in a small shot.",
+    "image": "images/espresso.jpg",
+    "rating": 3
+  },
+  {
+    "id": 2,
+    "name": "Americano",
+    "description": "A diluted espresso, made by adding hot water to a shot of espresso, resulting in a milder, larger coffee.",
+    "image": "images/americano.jpg",
+    "rating": 3
+  },
+  {
+    "id": 3,
+    "name": "Cappuccino",
+    "description": "A coffee drink made with equal parts espresso, steamed milk, and frothed milk.",
+    "image": "images/cappuccino.jpg",
+    "rating": 5
+  },
+  {
+    "id": 4,
+    "name": "Caffè latte",
+    "description": "A creamy coffee made with espresso and steamed milk, often topped with a light layer of foam.",
+    "image": "images/caffe-latte.jpg",
+    "rating": 5 
+  },
+  {
+    "id": 5,
+    "name": "Mocha",
+    "description": "A rich, sweet coffee drink combining espresso, steamed milk, and chocolate syrup, often topped with whipped cream.",
+    "image": "images/mocha.jpg",
+    "rating": 2 
+  },
+  {
+    "id": 6,
+    "name": "Flat White",
+    "description": "A smooth, velvety coffee made with espresso and steamed milk, similar to a latte but with less foam and a higher coffee-to-milk ratio.",
+    "image": "images/flat-white.jpg",
+    "rating": 5
+  },
+  {
+    "id": 7,
+    "name": "Iced Latte",
+    "description": "A chilled coffee beverage made with espresso, cold milk, and ice.",
+    "image": "images/iced-latte.jpg",
+    "rating": 5
+  },
+  {
+    "id": 8,
+    "name": "Cold Brew",
+    "description": "Coffee brewed slowly with cold water over an extended period, resulting in a smooth, less acidic drink, usually served over ice.",
+    "image": "images/cold-brew.jpg",
+    "rating": 3
+  },
+  {
+    "id": 9,
+    "name": "Chai Latte",
+    "description": "A spiced tea latte made with a blend of tea, milk, and aromatic spices like cinnamon, cardamom, and ginger.",
+    "image": "images/chai-latte.jpg",
+    "rating": 1
+  },
+  {
+    "id": 10,
+    "name": "Matcha Latte",
+    "description": "A creamy drink made with finely ground green tea powder (matcha) and steamed milk, offering a slightly grassy, sweet flavor.",
+    "image": "images/matcha-latte.jpg",
+    "rating": 5 
+  },
+  {
+    "id": 11,
+    "name": "Hot Chocolate",
+    "description": "A rich and creamy drink made with milk and melted chocolate or cocoa powder, often topped with whipped cream.",
+    "image": "images/hot-chocolate.jpg",
+    "rating": 4
+  },
+  {
+    "id": 12,
+    "name": "Earl Grey Tea",
+    "description": "A fragrant black tea flavored with bergamot oil, offering a citrusy, aromatic profile.",
+    "image": "images/earl-grey-tea.jpg",
+    "rating": 5
+  },
+  {
+    "id": 13,
+    "name": "Green Tea",
+    "description": "A light and earthy tea made from unoxidized tea leaves, packed with antioxidants and often served plain or with honey.",
+    "image": "images/green-tea.jpg",
+    "rating": 4
+  }
+]
