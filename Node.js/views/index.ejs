@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="index-page">
+    <div class="header">
+        <h1>Online Bookstore</h1>
+        <a href="/cart">Cart</a>
+    </div>
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+    <ul>
+        <% books.forEach(book => { %>
+            <li>
+                <div class="book-info">
+                    <span class="book-title"><%= book.title %></span>
+                    <span class="book-author"><%= book.author %></span>
+                    <span class="book-price"><%= book.price.toFixed(2) %> PLN</span>
+                </div>
+                <form action="/add-to-cart" method="POST" class="add-form">
+                    <input type="hidden" name="bookId" value="<%= book._id %>">
+                    <button type="submit">Add to Cart</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</body>
+</html>

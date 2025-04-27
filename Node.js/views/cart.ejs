@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your cart</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="cart-page">
+    <div class="header">
+        <h1>Cart</h1>
+        <a href="/">Go back to store</a>
+    </div>
+    <% if (message) { %>
+        <p><%= message %></p>
+    <% } %>
+    <ul>
+        <% cart.forEach(item => { %>
+            <li>
+                <div class="book-info">
+                    <span class="book-title"><%= item.title %></span>
+                    <span class="book-author"><%= item.author %></span>
+                    <span class="book-price"><%= item.price.toFixed(2) %> PLN</span>
+                </div>
+                <form action="/remove-from-cart" method="POST" class="remove-form">
+                    <input type="hidden" name="bookId" value="<%= item._id %>">
+                    <button type="submit">Remove</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+    <div class="cart-actions">
+        <form action="/checkout" method="POST">
+            <button type="submit">Buy</button>
+        </form>
+        <form action="/cancel" method="POST">
+            <button type="submit">Cancel</button>
+        </form>
+    </div>
+</body>
+</html>
