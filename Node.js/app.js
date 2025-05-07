@@ -88,9 +88,9 @@ app.post('/checkout', async (req, res) => {
         const bookIds = cart.map(item => new ObjectId(item._id));
         const books = await booksCollection.find({ _id: { $in: bookIds } }).toArray();
 
-        const isAvailable = books.every(book =>
-            cart.find(item => item._id.toString() === book._id.toString())
-        );
+        const isAvailable = cart.every(item =>
+            books.find(book => book._id.toString() === item._id.toString())
+        );        
 
         if (!isAvailable) {
             req.session.message = 'One or more books are no longer available.';
